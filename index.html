@@ -29,10 +29,8 @@ h1.display{font-size:clamp(44px,6vw,84px);line-height:1.02;letter-spacing:-0.025
 .lede{margin:28px 0 0;max-width:620px;font-size:20px;color:var(--muted)}
 .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px}
-.hero-photo{flex:1 1 360px;min-width:0;margin:0}
-.hero-photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:20px;border:1px solid var(--line);background:var(--card)}
-.hero-photo figcaption{margin-top:8px;font-size:12px;color:var(--dim)}
-.hero-photo figcaption a{color:var(--dim)}
+.listing{flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.listing .top{display:flex;justify-content:space-between;font-size:13px;color:var(--dim);text-transform:uppercase;letter-spacing:.1em}
 .facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;font-size:15px}
 .facts small{display:block;color:var(--dim);font-size:13px}
 .price{border-top:1px solid var(--line);padding-top:16px;display:flex;justify-content:space-between;font-size:15px}
@@ -96,10 +94,17 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;paddin
       <a href="#join" class="btn btn-ghost" data-role-link="host">List your dinner</a>
     </div>
   </div>
-  <figure class="hero-photo">
-    <img src="https://images.unsplash.com/photo-1731481382640-4859340396a7?w=1000&q=80&auto=format&fit=crop" alt="A long candlelit dinner table set with plates, flowers and food" width="1000" height="1250" loading="eager">
-    <figcaption>Photo: <a href="https://unsplash.com/photos/a-long-table-with-plates-and-candles-on-it-PyL-lApI1F8" target="_blank" rel="noopener">Mounish Raja on Unsplash</a></figcaption>
-  </figure>
+  <div class="card listing">
+    <div class="top"><span>Upcoming dinner</span><span style="color:var(--accent)">Sponsor slot open</span></div>
+    <div class="display" style="font-size:26px;line-height:1.15">[Dinner name]</div>
+    <div class="facts">
+      <div><small>City</small>[City]</div>
+      <div><small>Date</small>[Date]</div>
+      <div><small>Seats</small>[12 to 20]</div>
+      <div><small>Audience</small>[LPs, GPs, family offices]</div>
+    </div>
+    <div class="price"><span style="color:var(--dim)">Title sponsorship</span><strong>[YOUR PRICE]</strong></div>
+  </div>
 </section>
 
 <section id="how" class="how">
