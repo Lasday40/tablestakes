@@ -45,6 +45,14 @@ h2.display{font-size:clamp(32px,4vw,52px);margin-bottom:48px;max-width:720px}
 .who h3{margin:0 0 12px;font-family:'Newsreader',Georgia,serif;font-size:26px;color:var(--accent)}
 .who p{margin:0 0 14px;color:var(--muted)}
 .who ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.about{border-top:1px solid var(--line)}
+.about-grid{display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start}
+.headshot{flex:0 0 220px;width:220px;height:220px;border-radius:50%;object-fit:cover;background:var(--card);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:'Newsreader',Georgia,serif;font-size:64px;color:var(--accent)}
+.about-copy{flex:1 1 420px;min-width:0;max-width:720px}
+.about-copy h3{margin:0;font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:32px}
+.about-role{margin:4px 0 20px;color:var(--accent);font-weight:600;font-size:15px;letter-spacing:.06em;text-transform:uppercase}
+.about-copy p{color:var(--muted)}
+.about-copy p.about-role{color:var(--accent)}
 .join{background:var(--card);border-top:1px solid var(--line)}
 .join .wrap{max-width:760px}
 .join h2.display{margin-bottom:12px}
@@ -84,6 +92,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:cen
   <nav>
     <a href="#how">How it works</a>
     <a href="#who">Who it's for</a>
+    <a href="#about">About Us</a>
     <a href="#join" class="btn btn-primary" data-role-link="brand">Request Access</a>
   </nav>
 </header>
@@ -131,6 +140,21 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:cen
       <ul><li>Invitations matched to your thesis</li><li>Small tables, no badge scanning</li><li>Always free for invited guests</li></ul></div>
     <div class="card"><h3>Dinner Hosts</h3><p>Community builders, funds and media who already convene the right people and want it underwritten.</p>
       <ul><li>Get matched with aligned sponsors</li><li>Keep curation and guest list control</li><li>Fill seats from the vetted guest pool</li></ul></div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap section">
+    <h2 class="display">About Us</h2>
+    <div class="about-grid">
+      <div class="headshot" aria-hidden="true">DL</div>
+      <div class="about-copy">
+        <h3>David Lasday</h3>
+        <p class="about-role">Founder, TableStakes</p>
+        <p>David Lasday is a sports business connector, strategic advisor and the publisher of Asset Arena, the newsletter where sports, capital and infrastructure intersect. He works across sports tech, investment capital, facilities, NIL and youth sports, sourcing deals and making double opt-in introductions across a global network of investors, operators and athletes.</p>
+        <p>He writes a monthly column for Youth Sports Business Report and shares sports business insight with 53,000+ followers on LinkedIn. TableStakes grows out of that work: putting the right people at the same table.</p>
+      </div>
+    </div>
   </div>
 </section>
 
