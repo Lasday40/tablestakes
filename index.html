@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TableStakes | Sponsor curated investor dinners</title>
+<meta name="description" content="The sponsorship marketplace for curated investor dinners. Brands, professionals and dinner hosts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0E1A16;--card:#17261F;--line:#2A3A33;--field:#3A4B43;--text:#EFEAE0;--muted:#C8C2B4;--dim:#A8A293;--accent:#D9B66E;--on-accent:#14120C;--paper:#EFEAE0;--paper-ink:#14201B;--paper-muted:#3D4A44;--num:#7A5B1E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--text);font-family:'IBM Plex Sans',sans-serif;font-size:17px;line-height:1.55}
+a{color:var(--accent)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.display{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;letter-spacing:-0.02em;line-height:1.05;margin:0}
+.btn{display:inline-block;text-decoration:none;font-weight:600;padding:15px 26px;border-radius:999px;font-size:16px;border:0;cursor:pointer;min-height:48px}
+.btn-primary{background:var(--accent);color:var(--on-accent)}
+.btn-ghost{border:1.5px solid #4A5A52;color:var(--text)}
+header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:24px;padding-bottom:24px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:22px}
+nav{display:flex;flex-wrap:wrap;gap:24px;align-items:center;font-size:15px}
+nav a{color:var(--muted);text-decoration:none}
+nav a.btn{padding:11px 20px;min-height:auto;color:var(--on-accent)}
+.hero{display:flex;flex-wrap:wrap;gap:56px;align-items:flex-end;padding-top:72px;padding-bottom:96px}
+.hero-main{flex:999 1 560px;min-width:0}
+.eyebrow{margin:0 0 20px;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}
+h1.display{font-size:clamp(44px,6vw,84px);line-height:1.02;letter-spacing:-0.025em}
+.lede{margin:28px 0 0;max-width:620px;font-size:20px;color:var(--muted)}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px}
+.listing{flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.listing .top{display:flex;justify-content:space-between;font-size:13px;color:var(--dim);text-transform:uppercase;letter-spacing:.1em}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;font-size:15px}
+.facts small{display:block;color:var(--dim);font-size:13px}
+.price{border-top:1px solid var(--line);padding-top:16px;display:flex;justify-content:space-between;font-size:15px}
+.how{background:var(--paper);color:var(--paper-ink)}
+.section{padding-top:96px;padding-bottom:96px}
+h2.display{font-size:clamp(32px,4vw,52px);margin-bottom:48px;max-width:720px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px}
+.steps .n{font-family:'Bricolage Grotesque',sans-serif;font-size:44px;font-weight:700;color:var(--num)}
+.steps h3{margin:8px 0;font-size:21px;font-weight:600}
+.steps p{margin:0;color:var(--paper-muted)}
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.who h3{margin:0 0 12px;font-family:'Bricolage Grotesque',sans-serif;font-size:26px;color:var(--accent)}
+.who p{margin:0 0 14px;color:var(--muted)}
+.who ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.join{background:var(--card);border-top:1px solid var(--line)}
+.join .wrap{max-width:760px}
+.join h2.display{margin-bottom:12px}
+.join .intro{margin:0 0 32px;color:var(--muted)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;background:var(--ink);padding:6px;border-radius:999px;width:fit-content;max-width:100%}
+.tabs button{border:0;cursor:pointer;font:600 15px 'IBM Plex Sans',sans-serif;padding:11px 18px;min-height:44px;border-radius:999px;background:transparent;color:var(--muted)}
+.tabs button[aria-selected="true"]{background:var(--accent);color:var(--on-accent)}
+form{margin-top:32px}
+fieldset{border:0;padding:0;margin:0;display:contents}
+fieldset[disabled]{display:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+label{display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--muted)}
+.full{grid-column:1/-1}
+input,select,textarea{background:var(--ink);border:1px solid var(--field);border-radius:10px;padding:13px 14px;color:var(--text);font:16px 'IBM Plex Sans',sans-serif}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+textarea{resize:vertical}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.submit-row{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.status{font-size:15px;color:var(--muted)}
+.thanks{margin-top:32px;background:var(--ink);border:1px solid var(--accent);border-radius:16px;padding:32px}
+.thanks h3{margin:0 0 8px;font-family:'Bricolage Grotesque',sans-serif;font-size:26px}
+.thanks p{margin:0;color:var(--muted)}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding-top:40px;padding-bottom:40px;font-size:14px;color:var(--dim)}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#D9B66E" stroke-width="1.8" aria-hidden="true"><circle cx="14" cy="14" r="11"/><circle cx="14" cy="14" r="5"/><path d="M3 14h4M21 14h4"/></svg>
+    TableStakes
+  </div>
+  <nav>
+    <a href="#how">How it works</a>
+    <a href="#who">Who it's for</a>
+    <a href="#join" class="btn btn-primary" data-role-link="brand">Request access</a>
+  </nav>
+</header>
+
+<section class="wrap hero">
+  <div class="hero-main">
+    <p class="eyebrow">The sponsorship marketplace for curated investor dinners</p>
+    <h1 class="display">Put your brand at the table where capital gets allocated.</h1>
+    <p class="lede">TableStakes matches brands with intimate, invite-only dinners for investors, operators and founders. Hosts get the event funded. Brands get a seat in the room, not a logo on a banner.</p>
+    <div class="ctas">
+      <a href="#join" class="btn btn-primary" data-role-link="brand">Sponsor a dinner</a>
+      <a href="#join" class="btn btn-ghost" data-role-link="host">List your dinner</a>
+    </div>
+  </div>
+  <div class="card listing">
+    <div class="top"><span>Upcoming dinner</span><span style="color:var(--accent)">Sponsor slot open</span></div>
+    <div class="display" style="font-size:26px;line-height:1.15">[Dinner name]</div>
+    <div class="facts">
+      <div><small>City</small>[City]</div>
+      <div><small>Date</small>[Date]</div>
+      <div><small>Seats</small>[12 to 20]</div>
+      <div><small>Audience</small>[LPs, GPs, family offices]</div>
+    </div>
+    <div class="price"><span style="color:var(--dim)">Title sponsorship</span><strong>[YOUR PRICE]</strong></div>
+  </div>
+</section>
+
+<section id="how" class="how">
+  <div class="wrap section">
+    <h2 class="display">Three sides. One curated table.</h2>
+    <div class="steps">
+      <div><div class="n">01</div><h3>Hosts list the dinner</h3><p>Organizers submit the concept, city, guest profile and budget. Every dinner is reviewed before it goes live.</p></div>
+      <div><div class="n">02</div><h3>Brands pick their room</h3><p>Sponsors browse by audience, sector and geography, then fund a seat, a course, or the whole evening.</p></div>
+      <div><div class="n">03</div><h3>Professionals get invited</h3><p>Vetted investors and operators join the guest pool and receive invitations matched to their focus.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="who" class="wrap section">
+  <h2 class="display">Who it's for</h2>
+  <div class="who">
+    <div class="card"><h3>Brands</h3><p>Reach decision makers in a setting they actually remember. Sponsor by audience, not impressions.</p>
+      <ul><li>Filter dinners by investor type and sector</li><li>Speaking moment or quiet presence, your call</li><li>Post-dinner recap and opted-in guest follow-up</li></ul></div>
+    <div class="card"><h3>Professionals</h3><p>Investors, LPs, founders and operators who want fewer conferences and better conversations.</p>
+      <ul><li>Invitations matched to your thesis</li><li>Small tables, no badge scanning</li><li>Always free for invited guests</li></ul></div>
+    <div class="card"><h3>Dinner hosts</h3><p>Community builders, funds and media who already convene the right people and want it underwritten.</p>
+      <ul><li>Get matched with aligned sponsors</li><li>Keep curation and guest list control</li><li>Fill seats from the vetted guest pool</li></ul></div>
+  </div>
+</section>
+
+<section id="join" class="join">
+  <div class="wrap section">
+    <h2 class="display">Request access</h2>
+    <p class="intro">We are onboarding a founding group of brands, guests and hosts. Tell us which side of the table you're on.</p>
+
+    <div class="tabs" role="tablist" aria-label="I am a">
+      <button type="button" role="tab" data-role="brand" aria-selected="true">Brand / sponsor</button>
+      <button type="button" role="tab" data-role="pro" aria-selected="false">Investor / professional</button>
+      <button type="button" role="tab" data-role="host" aria-selected="false">Dinner host</button>
+    </div>
+
+    <form id="signup" novalidate>
+      <input type="hidden" name="type" value="Brand">
+      <div class="hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+      <div class="grid">
+        <label>Full name<input required type="text" name="name" autocomplete="name"></label>
+        <label>Work email<input required type="email" name="email" autocomplete="email"></label>
+
+        <fieldset data-for="brand">
+          <label>Company<input type="text" name="company" autocomplete="organization"></label>
+          <label>Annual events budget<select name="budget"><option>Under [AMOUNT]</option><option>[AMOUNT] to [AMOUNT]</option><option>Over [AMOUNT]</option></select></label>
+          <label class="full">Which audience do you want to reach?<input type="text" name="audience" placeholder="e.g. family offices in sports and media"></label>
+        </fieldset>
+
+        <fieldset data-for="pro" disabled>
+          <label>Firm<input type="text" name="company" autocomplete="organization"></label>
+          <label>Role<select name="role"><option>GP / VC</option><option>LP / Family office</option><option>Founder / Operator</option><option>Advisor</option></select></label>
+          <label>LinkedIn URL<input type="url" name="linkedin"></label>
+          <label>Home city<input type="text" name="city"></label>
+        </fieldset>
+
+        <fieldset data-for="host" disabled>
+          <label>Organization<input type="text" name="company" autocomplete="organization"></label>
+          <label>City and target date<input type="text" name="city"></label>
+          <label>Expected guests<select name="audience"><option>8 to 12</option><option>12 to 20</option><option>20 to 40</option></select></label>
+          <label>Sponsorship needed<input type="text" name="budget" placeholder="[AMOUNT]"></label>
+          <label class="full">Who is at the table?<textarea rows="3" name="notes"></textarea></label>
+        </fieldset>
+
+        <div class="submit-row">
+          <button type="submit" class="btn btn-primary" id="cta">Request sponsor access</button>
+          <span class="status" id="status" role="status"></span>
+        </div>
+      </div>
+    </form>
+
+    <div class="thanks" id="thanks" hidden>
+      <h3>You're on the list.</h3>
+      <p>We'll be in touch personally as founding spots open up.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <span>TableStakes. Curated dinners, aligned sponsors.</span>
+  <span>[contact@yourdomain.com]</span>
+</footer>
+
+<script>
+// Paste your Google Apps Script web app URL here
+const SHEET_ENDPOINT = 'PASTE_WEB_APP_URL_HERE';
+
+const roles = {
+  brand: { type: 'Brand', cta: 'Request sponsor access' },
+  pro:   { type: 'Professional', cta: 'Join the guest pool' },
+  host:  { type: 'Host', cta: 'Submit my dinner' }
+};
+const form = document.getElementById('signup');
+const statusEl = document.getElementById('status');
+const cta = document.getElementById('cta');
+
+function setRole(role) {
+  document.querySelectorAll('.tabs button').forEach(b => b.setAttribute('aria-selected', b.dataset.role === role));
+  document.querySelectorAll('fieldset[data-for]').forEach(f => f.disabled = f.dataset.for !== role);
+  form.elements.type.value = roles[role].type;
+  cta.textContent = roles[role].cta;
+  statusEl.textContent = '';
+}
+document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => setRole(b.dataset.role)));
+document.querySelectorAll('[data-role-link]').forEach(a => a.addEventListener('click', () => setRole(a.dataset.roleLink)));
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  if (!form.reportValidity()) return;
+  cta.disabled = true;
+  statusEl.textContent = 'Sending...';
+  try {
+    const body = new URLSearchParams(new FormData(form)); // disabled fieldsets are skipped
+    await fetch(SHEET_ENDPOINT, { method: 'POST', mode: 'no-cors', body });
+    form.hidden = true;
+    document.querySelector('.tabs').hidden = true;
+    document.getElementById('thanks').hidden = false;
+  } catch (err) {
+    statusEl.textContent = 'Something went wrong. Please try again.';
+    cta.disabled = false;
+  }
+});
+</script>
+</body>
+</html>
