@@ -136,7 +136,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;paddin
     <p class="intro">We are onboarding a founding group of brands, guests and hosts. Tell us which side of the table you're on.</p>
 
     <div class="tabs" role="tablist" aria-label="I am a">
-      <button type="button" role="tab" data-role="brand" aria-selected="true">Brand / sponsor</button>
+      <button type="button" role="tab" data-role="brand" aria-selected="true">Brand / Sponsor</button>
       <button type="button" role="tab" data-role="pro" aria-selected="false">Investor / Professional</button>
       <button type="button" role="tab" data-role="host" aria-selected="false">Dinner Host</button>
     </div>
@@ -170,7 +170,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;paddin
         </fieldset>
 
         <div class="submit-row">
-          <button type="submit" class="btn btn-primary" id="cta">Request sponsor access</button>
+          <button type="submit" class="btn btn-primary" id="cta">Request Sponsor Access</button>
           <span class="status" id="status" role="status"></span>
         </div>
       </div>
@@ -192,9 +192,9 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;paddin
 const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbydiTK8bN1NYyAwnQUi2Uw2zMFiO_ikS1tqQXSHgA1XA4euDPTGjxemIMNTDgBuwonA/exec';
 
 const roles = {
-  brand: { type: 'Brand', cta: 'Request sponsor access' },
-  pro:   { type: 'Professional', cta: 'Join the guest pool' },
-  host:  { type: 'Host', cta: 'Submit my dinner' }
+  brand: { type: 'Brand', cta: 'Request Sponsor Access' },
+  pro:   { type: 'Professional', cta: 'Join the Guest Pool' },
+  host:  { type: 'Host', cta: 'Submit My Dinner' }
 };
 const form = document.getElementById('signup');
 const statusEl = document.getElementById('status');
