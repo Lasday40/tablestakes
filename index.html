@@ -67,7 +67,11 @@ textarea{resize:vertical}
 .thanks{margin-top:32px;background:var(--ink);border:1px solid var(--accent);border-radius:16px;padding:32px}
 .thanks h3{margin:0 0 8px;font-family:'Newsreader',Georgia,serif;font-size:26px}
 .thanks p{margin:0;color:var(--muted)}
-footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding-top:40px;padding-bottom:40px;font-size:14px;color:var(--dim)}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding-top:40px;padding-bottom:40px;font-size:14px;color:var(--dim)}
+.powered{display:inline-flex;align-items:center;gap:10px;color:var(--dim);text-decoration:none;min-height:44px}
+.powered img{width:32px;height:32px;border-radius:8px;object-fit:contain;background:var(--card)}
+.powered strong{color:var(--text);font-weight:600}
+.powered:hover strong{color:var(--accent)}
 </style>
 </head>
 <body>
@@ -185,6 +189,11 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;paddin
 
 <footer class="wrap">
   <span>TableStakes. Curated dinners, aligned sponsors.</span>
+  <a class="powered" href="https://asset-arena-newsletter-ceb0e.beehiiv.com/" target="_blank" rel="noopener">
+    <span>Powered by</span>
+    <img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/11eaaf34-0d2f-45fe-b8d1-d457c7b1c43f/ChatGPT_Image_May_14__2026__08_56_35_PM.png" alt="" width="32" height="32">
+    <strong>Asset Arena</strong>
+  </a>
 </footer>
 
 <script>
